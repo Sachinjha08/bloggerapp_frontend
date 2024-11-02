@@ -11,7 +11,6 @@ const CreateBlog = () => {
     });
     const [error, setError] = useState('');
     const navigate = useNavigate();
-
     const handleChange = (e) => {
         setBlogData({ ...blogData, [e.target.name]: e.target.value });
     };
