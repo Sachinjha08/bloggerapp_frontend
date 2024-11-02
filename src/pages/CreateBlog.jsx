@@ -26,7 +26,7 @@ const CreateBlog = () => {
         };
 
         try {
-            await post('/api/v1/blog/create-blogs', formData);
+            await post(`/api/v1/blog/create-blogs`, formData);
             toast.success('Blog created successfully!');
             navigate('/');
         } catch (error) {
