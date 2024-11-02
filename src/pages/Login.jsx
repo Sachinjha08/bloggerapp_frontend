@@ -18,7 +18,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await post('/api/v1/user/login', formData);
+            await post(`/api/v1/user/login`, formData);
             dispatch(authActions.login());
             toast.success('Login successful!');
             navigate('/');
