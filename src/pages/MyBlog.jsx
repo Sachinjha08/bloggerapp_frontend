@@ -9,7 +9,7 @@ const MyBlog = () => {
 
     const fetchMyBlogs = async () => {
         try {
-            const response = await get('/api/v1/blog/get-user-blogs');
+            const response = await get(`/api/v1/blog/get-user-blogs`);
             setBlogs(response.data.blogs);
         } catch (error) {
             toast.error('Error fetching your blogs');
