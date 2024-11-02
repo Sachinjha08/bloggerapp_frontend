@@ -9,7 +9,6 @@ const Register = () => {
         email: "",
         password: ""
     });
-
     const handleChange = (e) => {
         setValue({
             ...value,
@@ -21,7 +20,7 @@ const Register = () => {
         e.preventDefault();
 
         try {
-            const request = await post('/api/v1/user/register', value);
+            const request = await post(`/api/v1/user/register`, value);
             const response = request.data;
             console.log(response);
             if (response.success) {
